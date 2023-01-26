@@ -1,0 +1,116 @@
+.app__navbar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.211);
+    border: 1px solid rgba(255,255,255,0.18);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    padding: 1rem;
+    z-index: 2;
+    position: fixed;
+    @media screen and (max-width:900px) {
+        justify-content: flex-end;
+    }
+}
+.app__navbar-menue{
+    background-color: var(--secondary-color);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    svg{
+        color: white;
+        font-size: 20px;
+    }
+    @media screen and (min-width:900px) {
+        display: none;
+    }
+    div{
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        bottom: 0;
+        right: 0;
+       
+        background-image: url('../../assets/bgWhite.png');
+        background-color: white;
+        background-repeat: repeat;
+        background-size: cover;
+        width: 70%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        @media screen and (min-width:900px) {
+            display: none;
+        }
+        svg{
+            color: var(--secondary-color);
+            align-self: flex-end;
+            margin: 1rem;
+            font-size: 30px;
+        }
+        ul{
+            list-style: none;
+            margin: 20px;
+            li{
+                padding: 0.8rem;
+               
+                a{
+                    text-decoration: none;
+                     color: var(--gray-color);
+                     font-weight: 500;
+                     text-transform: uppercase;
+                     font-size: 1rem;
+                     transition: all 0.5s;
+                     &:hover{
+                        color: var(--secondary-color);
+                    }
+                }
+                
+            }
+        }
+    }
+}
+.app__navbar-links{
+    list-style: none;
+    display: flex;
+    align-self: center;
+   @media screen and (max-width:900px) {
+    display: none;
+   }
+    li{
+        margin: 0 1rem;
+        cursor: pointer;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+       
+        div{
+            width:5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: transparent;
+            margin-bottom: 5px;
+            transition: all 0.5s ease-in-out;
+        }
+        a{
+            text-decoration: none;
+            color: var(--gray-color);
+            font-weight: 500;
+            text-transform: uppercase;
+            transition: all 0.5s ease-in-out;
+            font-size: 0.8rem;
+     &:hover{
+            color: var(--secondary-color);
+        }
+        }
+    &:hover div{
+            background-color: var(--secondary-color);
+    }    
+    }
+}

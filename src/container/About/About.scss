@@ -1,0 +1,43 @@
+.app__about{
+display: flex;
+width: 100%;
+flex: 1;
+flex-direction: column;
+}
+.app__profile{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.about__item{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 220px;
+    cursor: pointer;
+    margin: 3rem 2rem;
+    img{
+        width: 100%;
+        border-radius: 15px;
+        height: 170px;
+        object-fit: cover;
+    }
+    p{
+        padding: 0.3rem;
+        text-transform: capitalize;
+    }
+}
+@media screen and (max-width:750px) {
+    h2.head-text{
+        font-size: 25px;
+        margin-top:1rem ;
+        line-height: 1.8;
+    }
+    .about__item{
+      margin: 1rem;
+    }
+    
+}
